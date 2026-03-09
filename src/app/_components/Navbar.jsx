@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Code2, User, Briefcase, Send, FileText, Github, Linkedin } from 'lucide-react'
+import Link from 'next/link'
 
 // Note: Preview environment mein 'next/link' resolve nahi ho raha tha, 
 // isliye hum standard 'a' tags use kar rahe hain. 
@@ -12,9 +13,9 @@ import { Code2, User, Briefcase, Send, FileText, Github, Linkedin } from 'lucide
 // Portfolio Navigation Items
 const navigation = [
   { name: 'About', href: '/about', icon: User },
-  { name: 'Projects', href: '#projects', icon: Briefcase },
-  { name: 'Skills', href: '#skills', icon: Code2 },
-  { name: 'Contact', href: '#contact', icon: Send },
+  { name: 'Projects', href: '/projects', icon: Briefcase },
+  { name: 'Skills', href: '/skills', icon: Code2 },
+  { name: 'Contact', href: '/contact', icon: Send },
 ]
 
 export default function Navbar() {
@@ -38,14 +39,14 @@ export default function Navbar() {
         
         {/* --- LOGO / INITIALS --- */}
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group decoration-transparent no-underline">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group decoration-transparent no-underline">
             <div className="bg-black text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">
               P
             </div>
             <span className="text-xl font-bold tracking-tight text-black">
               Port<span className="text-blue-600">folio.</span>
             </span>
-          </a>
+          </Link>
         </div>
 
         {/* --- MOBILE TOGGLE --- */}
@@ -63,33 +64,33 @@ export default function Navbar() {
         {/* --- DESKTOP NAVIGATION (Center) --- */}
         <div className="hidden lg:flex lg:gap-x-10">
           {navigation.map((item) => (
-            <a 
+            <Link 
               key={item.name} 
               href={item.href} 
               className="text-sm font-semibold leading-6 text-gray-600 hover:text-black transition-colors relative group decoration-transparent no-underline"
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* --- DESKTOP CTA (Right) --- */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-6">
           <div className="flex items-center gap-4 border-r border-gray-200 pr-6 mr-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors no-underline">
+            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors no-underline">
               <Github size={20} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors no-underline">
+            </Link>
+            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors no-underline">
               <Linkedin size={20} />
-            </a>
+            </Link>
           </div>
-          <a 
+          <Link 
             href="/resume.pdf" 
             className="flex items-center gap-2 px-6 py-2.5 bg-black text-white rounded-full text-sm font-bold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-200 transition-all active:scale-95 decoration-transparent no-underline"
           >
             <FileText size={16} /> Resume
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -98,9 +99,9 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" /> 
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5 font-bold text-xl decoration-transparent no-underline text-black" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" className="-m-1.5 p-1.5 font-bold text-xl decoration-transparent no-underline text-black" onClick={() => setMobileMenuOpen(false)}>
               Portfolio<span className="text-blue-600">.</span>
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -115,7 +116,7 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-4 py-8">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
@@ -123,21 +124,21 @@ export default function Navbar() {
                   >
                     <item.icon className="h-5 w-5 text-gray-400" />
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               
               <div className="py-8 flex flex-col gap-4">
-                <a 
+                <Link 
                   href="/resume.pdf" 
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-3 w-full rounded-2xl bg-black px-6 py-4 text-center text-lg font-bold text-white shadow-xl active:scale-95 transition-all decoration-transparent no-underline"
                 >
                   <FileText size={20} /> Download Resume
-                </a>
+                </Link>
                 <div className="flex justify-center gap-8 mt-4">
-                   <a href="#" className="text-gray-400 hover:text-black transition-colors no-underline"><Github size={24} /></a>
-                   <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors no-underline"><Linkedin size={24} /></a>
+                   <Link href="#" className="text-gray-400 hover:text-black transition-colors no-underline"><Github size={24} /></Link>
+                   <Link href="#" className="text-gray-400 hover:text-blue-600 transition-colors no-underline"><Linkedin size={24} /></Link>
                 </div>
               </div>
             </div>

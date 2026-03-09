@@ -19,12 +19,12 @@ const About = () => {
 
     {/* 2. Left Side: Content (Relative aur z-10 taaki upar dikhe) */}
     <div className="relative z-10 flex-1 px-20 space-y-8 text-center md:text-left">
-      <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+      <h1 className="text-5xl font-bold text-black leading-tight">
         Transforming Global Landscapes with Visionary Software and Dedicated<br /> 
         <span className="text-vivid-violet italic text-blue-400">Passion</span>
       </h1>
       
-      <p className="text-gray-700 text-lg max-w-md">
+      <p className="text-black text-lg max-w-md">
         Creative developer exploring the intersection of design and code with Next.js and 3D assets.
       </p>
 

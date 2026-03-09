@@ -3,7 +3,7 @@ import React from 'react';
 const GlowCard = () => {
   return (
     <>
-      {/* 1. Yahan CSS Magic hai (Houdini API + Keyframes) */}
+      {/* 1. Yahan CSS hai aur style hai (Houdini API + Keyframes) */}
       <style>{`
         @property --angle {
           syntax: '<angle>';

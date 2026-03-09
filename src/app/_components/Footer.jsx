@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -11,10 +12,12 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             {/* Logo Section */}
             <div className="h-[35px] flex items-center">
-              <img 
+              <Image 
                 src="https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo.svg" 
                 alt="Logo" 
-                className="h-full w-auto brightness-0 invert" 
+                className="h-full w-auto brightness-0 " 
+                width={140}
+                height={35}
               />
             </div>
             {/* Style Reference: Matching Specs description weight and color */}

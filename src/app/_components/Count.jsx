@@ -37,9 +37,9 @@ const Count = () => {
           
           {/* 1. Left Section: Heading (Thoda bada) */}
           <div className="lg:w-[35%] w-full">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-center lg:text-left">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-center lg:text-left ">
               Transforming Ideas <br /> 
-              <span className="text-blue-400">Into Impact</span>
+              <span className="text-blue-400 text-vivid-violet italic">Into Impact</span>
             </h2>
           </div>
 

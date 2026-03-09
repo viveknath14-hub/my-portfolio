@@ -26,7 +26,7 @@ const AnimatedCard = ({ title, description, icon: Icon }) => {
 }
 
 function Features() {
-  // 2. Data Array: Isse code clean rehta hai
+  // 2. Data Array: isse code clean rahega aur easily update kar sakenge
   const featuresData = [
     {
       icon: Smartphone,
@@ -95,7 +95,7 @@ function Features() {
               <p className="text-black text-sm max-w-xs mx-auto">
                 Designed to provide privacy, reliability, and security for modern businesses everywhere.
               </p>
-              <button className="bg-blue-400 hover:bg-blue-400/50 text-black font-bold py-3 px-8 rounded-xl flex items-center gap-2 mx-auto transition-all">
+              <button className="bg-blue-400/50 hover:bg-blue-400/30 text-black font-bold py-3 px-8 rounded-xl flex items-center gap-2 mx-auto transition-all">
                 Get Started <ArrowRight size={18} />
               </button>
             </div>

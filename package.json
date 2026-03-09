@@ -10,6 +10,7 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "class-variance-authority": "^0.7.1",
