@@ -39,9 +39,7 @@ const ContactSection = () => {
                 <div key={idx} className="group relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-500/10 cursor-pointer border border-gray-100">
                   <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Preview" />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-xl group-hover:scale-110 transition-transform">
-                      
-                    </div>
+                    
                   </div>
                 </div>
               ))}
