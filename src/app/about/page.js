@@ -202,12 +202,12 @@ const mobileAppData = [
     {/* LEFT PART: Heading aur text (6 columns) */}
     <div className="lg:col-span-6 flex flex-col justify-between space-y-12">
       <div>
-        <h2 className="text-4xl md:text-4xl font-bold leading-[1.1] mb-6">
+        <h2 className="text-4xl md:text-4xl text-center md:text-left font-bold leading-[1.1] mb-6">
           Designing And Building Modern Web Development <br /> 
           <span className="text-blue-400 text-vivid-violet italic">Solutions</span>  <br /> 
          
         </h2>
-        <div className="text-black text-lg space-y-6 max-w-xl ">
+        <div className="text-black text-lg space-y-6 max-w-xl text-center md:text-left">
           <p>
             Empower your projects with efficient, scalable, and well-structured code. 
             From modern web apps to automated pipelines, every line is optimized for 

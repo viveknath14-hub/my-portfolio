@@ -136,7 +136,7 @@ const page = () => {
           
           <div className="space-y-6 text-black text-lg leading-relaxed">
             <p>
-          Since 2010, we've been pioneering innovation across web development, artificial intelligence, and cloud solutions. Our team combines cutting-edge technology with intuitive user experiences, delivering modern, responsive applications that scale effortlessly and drive measurable results for clients worldwide.
+          Since 2024, we've been pioneering innovation across web development, artificial intelligence, and cloud solutions. Our team combines cutting-edge technology with intuitive user experiences, delivering modern, responsive applications that scale effortlessly and drive measurable results for clients worldwide.
             </p>
             
             <p>
