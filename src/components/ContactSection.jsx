@@ -40,7 +40,7 @@ const ContactSection = () => {
                   <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Preview" />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-xl group-hover:scale-110 transition-transform">
-                      <Play size={20} fill="currentColor" />
+                      
                     </div>
                   </div>
                 </div>
