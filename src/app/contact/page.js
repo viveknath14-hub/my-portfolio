@@ -54,8 +54,8 @@ const page = () => {
                 Let’s Connect and Build <br /> <span className="text-blue-400 text-vivid-violet italic">Something Great</span>
               </h2>
               <p className="text-black text-lg leading-relaxed">
-                At Codespot, we’re always excited to hear from you. Whether you have a project in mind, need expert advice, or simply want to discuss possibilities — our team is here to help. Reach out through the form below or visit us in person.
-              </p>
+ At our core, we believe in creating digital experiences that matter. Whether you're looking to launch a new project, scale your existing platform, or need technical expertise, we're here to partner with you every step of the way. Let's turn your vision into reality.              </p>
+             
               
               {/* Featured Image */}
               <div className="rounded-[3.5rem] overflow-hidden shadow-2xl shadow-blue-500/10 border-[12px] border-gray-50">

@@ -2,6 +2,7 @@ import { main } from 'framer-motion/client'
 import { Activity, ArrowRight, Code2, Cpu, Database, Globe, Layers, Layout, Play, Rocket, Shield, Smartphone, Tablet, Zap } from 'lucide-react'
 import React from 'react'
 import Specs from '../_components/Specs'
+import Link from 'next/link'
 
 const page = () => {
 
@@ -60,34 +61,31 @@ const mobileAppData = [
           {/* --- LEFT COLUMN: CONTENT & VIDEOS --- */}
           <div className="space-y-10">
             <div className="max-w-xl">
-              <h2 className="text-4xl md:text-4xl font-bold text-black leading-tight tracking-tight">
+              <h2 className="text-4xl md:text-4xl font-bold text-black leading-tight tracking-tight text-center lg:text-left">
                 Expert Development Services for Growth and <span className="text-blue-400 text-vivid-violet italic">Performance</span>
               </h2>
-              <p className="mt-6 text-lg text-black leading-relaxed">
+              <p className="mt-6 text-lg text-black leading-relaxed text-center lg:text-left">
                 From concept to deployment, we build reliable, future-ready solutions that drive sustainable business results.
               </p>
             </div>
 
             {/* Video Placeholders Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                { img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/services-page-image-2.webp" },
-                { img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/services-page-image-3.webp" }
-              ].map((video, idx) => (
-                <div key={idx} className="group relative aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/10 cursor-pointer">
-                  <img 
-                    src={video.img} 
-                    alt="Service Preview" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                    <div className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-blue-400 shadow-xl transform group-hover:scale-110 transition-transform">
-                      <Play size={24} fill="currentColor" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+  {[
+    { img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/services-page-image-2.webp" },
+    { img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/services-page-image-3.webp" }
+  ].map((item, idx) => (
+    <div key={idx} className="group relative aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/10">
+      <img 
+        src={item.img} 
+        alt="Service Preview" 
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      {/* Humne Play button wala pura div yahan se hata diya hai */}
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+    </div>
+  ))}
+</div>
           </div>
 
           {/* --- RIGHT COLUMN: FEATURES LIST --- */}
@@ -143,9 +141,12 @@ const mobileAppData = [
 
               {/* CTA Button */}
               <div className="pt-6">
+                          <Link href="/contact" className="w-full sm:w-auto">
+
                 <button className="w-full md:w-auto px-8 py-4 bg-blue-400 text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-blue-500 transition-all active:scale-95 shadow-xl shadow-black/10">
                   Get started now <ArrowRight size={20} />
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -206,7 +207,7 @@ const mobileAppData = [
           <span className="text-blue-400 text-vivid-violet italic">Solutions</span>  <br /> 
          
         </h2>
-        <div className="text-black text-md space-y-6 max-w-xl font-medium">
+        <div className="text-black text-lg space-y-6 max-w-xl ">
           <p>
             Empower your projects with efficient, scalable, and well-structured code. 
             From modern web apps to automated pipelines, every line is optimized for 
@@ -224,16 +225,12 @@ const mobileAppData = [
         <div>
           <h3 className="text-xl font-bold mb-2">Programming Solutions</h3>
           <p className="text-black text-sm mb-4">Tailored software solutions for performance and scalability.</p>
-          <a href="#" className="text-blue-400 flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all">
-            More Information <span>→</span>
-          </a>
+          
         </div>
         <div>
           <h3 className="text-xl font-bold mb-2">Secure Infrastructure</h3>
           <p className="text-black text-sm mb-2">Ensure stability, reliability, and data security across systems.</p>
-          <a href="#" className="text-blue-400 flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all">
-            More Information <span>→</span>
-          </a>
+          
         </div>
       </div>
     </div>

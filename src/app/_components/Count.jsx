@@ -6,15 +6,15 @@ const Counter = ({ from, to, postfix }) => {
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   
-  // YE CHANGE HAI: Ref banaya hai section ko track karne ke liye
+  // Ref banaya hai section ko track karne ke liye
   const ref = useRef(null);
   
-  // YE CHANGE HAI: useInView check karega ki element screen par aaya ya nahi
+  // useInView check karega ki element screen par aaya ya nahi
   // once: true ka matlab hai ki animation sirf ek baar chalegi
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    // YE CHANGE HAI: Animation tabhi start hogi jab isInView true hoga
+    //  Animation tabhi start hogi jab isInView true hoga
     if (isInView) {
       const controls = animate(count, to, { duration: 2 });
       return controls.stop;

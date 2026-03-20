@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button'
 import GlowCard from '@/components/ui/GlowCard'
+import { link } from 'framer-motion/client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
-
 const About = () => {
   return (
     <main className="min-h-screen bg-white overflow-hidden pt-10">
@@ -11,7 +12,7 @@ const About = () => {
     
     {/* 1. Background Neon Glow Layer (Text ke peeche) */}
     <div className="absolute left-0 top-1/2 -translate-y-1/2 z-0 opacity-70 blur-[80px] md:blur-[120px] pointer-events-none isolate transform-gpu">
-      {/* GlowCard ko yahan as a "blob" use karenge */}
+      {/* GlowCard ko yahan as a "blob" use karna hoga */}
       <div className="scale-[2.5] md:scale-[2.5] backface-hidden"> 
          <GlowCard /> 
       </div>
@@ -28,10 +29,6 @@ const About = () => {
         Creative developer exploring the intersection of design and code with Next.js and 3D assets.
       </p>
 
-      <Button className="bg-blue-200 text-black h-9 px-8 py-4 rounded-full font-medium hover:bg-blue-300 transition-all shadow-sm">
-        Get Started
-      </Button>
-
       <div className="card-container w-full mx-w-xs md:mx-wd-md mx-auto md-mx-0 lg:mx-w-md flex flex-col sm:flex-row gap-3">
 
       <div className="card flex-1 py-2 px-6 lg:h-10 md:p-4 rounded-full bg-blue-200 shadow-sm text-black text-center flex items-center justify-center font-medium mb-5">
@@ -41,6 +38,12 @@ const About = () => {
       <p className='text-sm md:text-sm'>10+ years of coding experience</p>
       </div>
       </div>
+
+      <Link href="/contact">
+        <Button className="bg-blue-200 text-black h-9 px-8 py-4 rounded-full font-medium hover:bg-blue-300 transition-all shadow-sm">
+          Get Started
+        </Button>
+      </Link>
     </div>
 
     
@@ -48,7 +51,7 @@ const About = () => {
         <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
           <div className="relative ">
             <Image
-              src="/3d assets/Breeze.png" // Folder move karne ke baad sahi path dein
+              src="/3d assets/Breeze.png" 
               alt="3D Asset" 
               width={500} 
               height={500} 

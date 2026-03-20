@@ -1,30 +1,30 @@
 import { ArrowRight, Quote, Star, StarIcon } from 'lucide-react'
 import Image from 'next/image';
 import React from 'react'
+import Link from 'next/link'; 
 
 
 const team = [
-    { name: "Michael Scott", role: "Founder & CEO", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-1.webp" },
-    { name: "Sienna Hewitt", role: "Human Resources", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-2.webp" },
-    { name: "Owen Garcia", role: "Team Lead PHP", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-3.webp" },
-    { name: "Chandler Rigs", role: "Team Lead Analyst", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-4.webp" },
-    { name: "Kate Anderson", role: "Marketing Specialist", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-5.webp" },
-    { name: "Andrew Clarcks", role: "Finance", img: "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/team-member-6.webp" },
+    { name: "Prem Kumar", role: "Backend Developer", img: "/Team Images/coreteam1.jpg" },
+    { name: "Vivek Nath", role: "Frontend and AI tech.", img: "/Team Images/coreteam2.jpg" },
+    { name: "Rahul Tiwari", role: "PHP Developer", img: "/Team Images/coreteam3.avif" },
+    { name: "Jayant Sharma", role: "Cloud Technology Specialist", img: "/Team Images/coreteam3.avif" },
+    
   ];
 
-  const logos = [
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-1.svg",
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-2.svg",
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-3.svg",
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-4.svg",
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-5.svg",
-    "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-6.svg",
-  ];
+  // const logos = [
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-1.svg",
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-2.svg",
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-3.svg",
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-4.svg",
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-5.svg",
+  //   "https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/logo-6.svg",
+  // ];
 
 const page = () => {
   return (
    <main>
-    <section className="bg-white mt-10 py-20 px-6 md:px-20 overflow-hidden">
+    <section className="bg-white mt-20 py-20 px-6 md:px-20 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-8">
           
@@ -33,7 +33,7 @@ const page = () => {
                 <h2 className="text-4xl md:text-7xl font-bold text-black leading-tight tracking-tight">
                   Pioneering Innovation in Web Development,{" "}
                   <span className="text-blue-400 text-vivid-violet italic">Artificial Intelligence</span>, And{" "}
-                  <span className="text-blue-400 text-vivid-violet italic">Cloud Solutions</span> Since 2010
+                  <span className="text-blue-400 text-vivid-violet italic">Cloud Solutions</span>
                 </h2>
                 </div>
 
@@ -118,10 +118,10 @@ const page = () => {
       
       {/* --- LEFT COLUMN: IMAGE/VIDEO CONTAINER --- */}
       <div className="relative group w-full aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden bg-gray-100 shadow-2xl">
-        {/* Aap yahan apni team ya office ki image daal sakte hain */}
+        {/* Space for team and office images */}
         <img 
-          src="https://startersites.io/blocksy/codespot/wp-content/uploads/2025/10/about-page-image-1.webp" 
-          alt="Our Story - Codespot Team" 
+          src="/Team Images/Team.jpg" 
+          alt="Our Story - Team Image" 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Subtle Blue Overlay */}
@@ -146,16 +146,13 @@ const page = () => {
 
         {/* --- CUSTOM BUTTON --- */}
         <div className="mt-10">
-          <button className="group flex items-center gap-3 bg-black text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all active:scale-95 shadow-xl shadow-black/10">
+          <Link href="/contact" className="w-full sm:w-auto">
+          <button className="group flex items-center gap-3 bg-blue-400 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all active:scale-95 shadow-xl shadow-black/10">
             Get Started
-            <svg 
-              className="w-5 h-5 fill-current transform group-hover:translate-x-1 transition-transform" 
-              viewBox="0 0 896 1024" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-            </svg>
+            
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
+          </Link>
         </div>
       </div>
 
@@ -289,7 +286,7 @@ const page = () => {
           </h2>
 
           {/* Partner Logos Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center opacity-60">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center opacity-60">
             {logos.map((logo, index) => (
               <div key={index} className="h-12 relative grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 <Image 
@@ -300,11 +297,11 @@ const page = () => {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Button */}
           <div className="pt-6">
-            <button className="group flex items-center gap-3 bg-blue-400 text-black px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all active:scale-95 shadow-xl shadow-blue-500/20">
+            <button className="group flex items-center gap-3 bg-blue-400 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all active:scale-95 shadow-xl shadow-blue-500/20">
               Get in touch now
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>

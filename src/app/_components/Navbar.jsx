@@ -3,15 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Code2, User, Briefcase, Send, FileText, Github, Linkedin } from 'lucide-react'
+import { Code2, User, Briefcase, Send, FileText, Github, Linkedin, MailIcon } from 'lucide-react'
 import Link from 'next/link'
-
-// Note: Preview environment mein 'next/link' resolve nahi ho raha tha, 
-// isliye hum standard 'a' tags use kar rahe hain. 
-// Aap apne local Next.js project mein inhe <Link href="..."> se replace kar sakte hain.
 
 // Portfolio Navigation Items
 const navigation = [
+    { name: 'Home', href: '/', icon: User },
   { name: 'About', href: '/about', icon: User },
   { name: 'Projects', href: '/projects', icon: Briefcase },
   { name: 'Skills', href: '/skills', icon: Code2 },
@@ -40,11 +37,11 @@ export default function Navbar() {
         {/* --- LOGO / INITIALS --- */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group decoration-transparent no-underline">
-            <div className="bg-black text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">
-              P
+            <div className="bg-black text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl group-hover:bg-blue-400 transition-colors">
+              C
             </div>
             <span className="text-xl font-bold tracking-tight text-black">
-              Port<span className="text-blue-600">folio.</span>
+              Click<span className="text-blue-400">sutra.</span>
             </span>
           </Link>
         </div>
@@ -56,7 +53,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:bg-gray-100 transition-colors"
           >
-            <span className="sr-only">Menu kholein</span>
+            <span className="sr-only">Menu</span>
             <Bars3Icon aria-hidden="true" className="h-7 w-7" />
           </button>
         </div>
@@ -77,20 +74,14 @@ export default function Navbar() {
 
         {/* --- DESKTOP CTA (Right) --- */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-6">
-          <div className="flex items-center gap-4 border-r border-gray-200 pr-6 mr-2">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors no-underline">
-              <Github size={20} />
-            </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors no-underline">
-              <Linkedin size={20} />
-            </Link>
-          </div>
+          
           <Link 
-            href="/resume.pdf" 
-            className="flex items-center gap-2 px-6 py-2.5 bg-black text-white rounded-full text-sm font-bold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-200 transition-all active:scale-95 decoration-transparent no-underline"
-          >
-            <FileText size={16} /> Resume
-          </Link>
+  href="/contact" 
+  className="flex items-center gap-2 px-6 py-2.5 bg-blue-400 text-white rounded-full text-sm font-bold hover:bg-blue-400 hover:shadow-lg hover:shadow-blue-200 transition-all active:scale-95 decoration-transparent no-underline"
+>
+  <MailIcon size={16} /> 
+  Contact us
+</Link>
         </div>
       </nav>
 
@@ -128,19 +119,7 @@ export default function Navbar() {
                 ))}
               </div>
               
-              <div className="py-8 flex flex-col gap-4">
-                <Link 
-                  href="/resume.pdf" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-3 w-full rounded-2xl bg-black px-6 py-4 text-center text-lg font-bold text-white shadow-xl active:scale-95 transition-all decoration-transparent no-underline"
-                >
-                  <FileText size={20} /> Download Resume
-                </Link>
-                <div className="flex justify-center gap-8 mt-4">
-                   <Link href="#" className="text-gray-400 hover:text-black transition-colors no-underline"><Github size={24} /></Link>
-                   <Link href="#" className="text-gray-400 hover:text-blue-600 transition-colors no-underline"><Linkedin size={24} /></Link>
-                </div>
-              </div>
+              
             </div>
           </div>
         </DialogPanel>

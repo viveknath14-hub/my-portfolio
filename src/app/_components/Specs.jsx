@@ -44,10 +44,7 @@ const Specs = ({ data }) => {
                 <p className="text-black text-sm leading-relaxed mb-6">{item.desc}</p>
               </div>
 
-              <button className="flex items-center gap-2 text-blue-400 font-bold text-sm group/btn">
-                Get Started Now
-                <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform duration-300" />
-              </button>
+             
             </div>
           </div>
         ))}

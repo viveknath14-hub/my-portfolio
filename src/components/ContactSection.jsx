@@ -19,16 +19,16 @@ const ContactSection = () => {
           
           {/* --- LEFT COLUMN: STICKY (lg:col-span-5) --- */}
           {/* 'lg:sticky' aur 'lg:top-24' isey scroll hone se rokega desktop par */}
-          <div className="lg:col-span-5 lg:sticky lg:top-24 h-fit space-y-12">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-black leading-[1.1] tracking-tighter">
-                Get in Touch <span className="text-blue-400 text-vivid-violet italic">With Us</span>
-              </h2>
-              <p className="text-black text-lg leading-relaxed">
-                Founded in 2010, Codespot began as a small team of tech enthusiasts with a vision 
-                to redefine digital experiences through innovation, collaboration, and expertise.
-              </p>
-            </div>
+                <div className="lg:col-span-5 lg:sticky lg:top-24 h-fit space-y-12">
+                <div className="space-y-6">
+                  <h2 className="text-4xl md:text-5xl font-bold text-black leading-[1.1] tracking-tighter">
+                  Get in Touch <span className="text-blue-400 text-vivid-violet italic">With Us</span>
+                  </h2>
+                  <p className="text-black text-lg leading-relaxed">
+                  We're here to help bring your ideas to life. Whether you have a question about our services, 
+                  need a consultation, or want to discuss your next project, feel free to reach out anytime.
+                  </p>
+                </div>
 
             {/* Video Preview Grid with Big Shadows */}
             <div className="grid grid-cols-2 gap-4">
@@ -55,7 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-black">Phone number</h4>
-                  <a href="tel:+74951234567" className="text-black hover:text-blue-400">+7 (495) 123-45-67</a>
+                  <a href="tel:+91-9654311631" className="text-black hover:text-blue-400">+91-9654311631</a>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-black">Email address</h4>
-                  <a href="mailto:info@codespot.com" className="text-black hover:text-blue-400">info@codespot.com</a>
+                  <a href="mailto:viveknath14@gmail.com" className="text-black hover:text-blue-400">viveknath14@gmail.com</a>
                 </div>
               </div>
 
@@ -75,7 +75,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-black">Physical address</h4>
-                  <a href="https://maps.google.com" target="_blank" className="text-black hover:text-blue-400">Nevada, Queenie Drive 865</a>
+                  <a href="https://maps.google.com" target="_blank" className="text-black hover:text-blue-400">Sector 25, Rohini</a>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                 <textarea id="message" name='message' rows="6" required placeholder="Tell us about your project..." className="w-full bg-white px-8 py-6 rounded-[2rem] shadow-sm focus:ring-4 focus:ring-blue-600/5 outline-none resize-none transition-all placeholder:font-bold"></textarea>
                 <ValidationError prefix='Message' field='message' errors={state.erroes} className="text-red-500 text-xs ml-2" />
                 
-                <Button type="submit" disabled={state.submitting} className="w-full py-8 bg-blue-400 hover:bg-blue-500 text-black rounded-[2rem] font-bold text-xl shadow-2xl shadow-blue-500/20">
+                <Button type="submit" disabled={state.submitting} className="w-full py-8 bg-blue-400 hover:bg-blue-500 text-white rounded-[2rem] font-bold text-xl shadow-2xl shadow-blue-500/20">
                   {state.submitting ? "Sending..." : "Submit Inquiry"} <Send size={24} className="ml-3" />
                 </Button>
               </form>
