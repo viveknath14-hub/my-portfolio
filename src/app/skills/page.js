@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 
 const team = [
-    { name: "Prem Kumar", role: "Backend Developer", img: "/Team Images/coreteam1.jpg" },
-    { name: "Vivek Nath", role: "Frontend and AI tech.", img: "/Team Images/coreteam2.jpg" },
-    { name: "Rahul Tiwari", role: "PHP Developer", img: "/Team Images/coreteam3.avif" },
-    { name: "Jayant Sharma", role: "Cloud Technology Specialist", img: "/Team Images/coreteam3.avif" },
+    { name: "Prem Kumar", role: "Backend Developer", img: "/Team images/coreteam1.jpg" },
+    { name: "Vivek Nath", role: "Frontend and AI tech.", img: "/Team images/coreteam2.jpg" },
+    { name: "Rahul Tiwari", role: "PHP Developer", img: "/Team images/coreteam3.avif" },
+    { name: "Jayant Sharma", role: "Cloud Technology Specialist", img: "/Team images/coreteam3.avif" },
     
   ];
 
@@ -120,7 +120,7 @@ const page = () => {
       <div className="relative group w-full aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden bg-gray-100 shadow-2xl">
         {/* Space for team and office images */}
         <img 
-          src="/Team Images/Team.jpg" 
+          src="/Team images/Team.jpg" 
           alt="Our Story - Team Image" 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
