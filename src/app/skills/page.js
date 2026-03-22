@@ -205,7 +205,7 @@ const page = () => {
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                  className="scroll-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 />
                 
                 {/* Overlay Content */}
@@ -301,10 +301,12 @@ const page = () => {
 
           {/* CTA Button */}
           <div className="pt-6">
-            <button className="group flex items-center gap-3 bg-blue-400 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all active:scale-95 shadow-xl shadow-blue-500/20">
+            <Link href="/contact" className="w-full sm:w-auto">
+            <button  className="group flex items-center gap-3 bg-blue-400 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all active:scale-95 shadow-xl shadow-blue-500/20">
               Get in touch now
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
+            </Link>
           </div>
         </div>
 

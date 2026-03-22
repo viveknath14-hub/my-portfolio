@@ -55,13 +55,28 @@
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
-
+ 
   @keyframes spin {
     from { --angle: 0deg; }
     to { --angle: 360deg; }
   }
 
-  /* EDITS: Inhe theme variables banaya */
+  /* New animation for revealing images on scroll */
+  @keyframes reveal-image {
+  from {
+    filter: grayscale(100%);
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  to {
+    filter: grayscale(0%);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+  /* EDITS: Inhe theme variables bana diya */
   --animate-float: float 4s ease-in-out infinite;
   --animate-border-spin: spin 3s linear infinite;
 }
@@ -130,6 +145,15 @@
 .animate-border-spin::before {
   filter: blur(1.5rem);
   opacity: 0.5;
+}
+
+/*Scroll reveal class yahan hai images reveal ke liye */
+.scroll-reveal-img {
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation: linear reveal-image both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 10% cover 30%; /* Isse focus jaldi aayega */
 }
 
 .dark {
