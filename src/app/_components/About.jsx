@@ -18,33 +18,46 @@ const About = () => {
       </div>
     </div>
 
-    {/* 2. Left Side: Content (Relative aur z-10 taaki upar dikhe) */}
-    <div className="relative z-10 flex-1 px-20 space-y-8 text-center md:text-left">
-      <h1 className="text-5xl font-bold text-black leading-tight">
-        Transforming Global Landscapes with Visionary Software and Dedicated<br /> 
-        <span className="text-vivid-violet italic text-blue-400">Passion</span>
-      </h1>
-      
-      <p className="text-black text-lg max-w-md">
-        Creative developer exploring the intersection of design and code with Next.js, 3d assets and other technologies.
+    {/* 2. Left Side: Content */}
+<div className="relative z-10 flex-1 px-6 md:px-20 space-y-6 text-center md:text-left">
+  
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight tracking-tight">
+    Transforming Global Landscapes with Visionary Software and Dedicated<br className=" md:block" />
+    <span className="text-blue-400 italic">Passion</span>
+  </h1>
+  
+  <p className="text-black text-lg max-w-md mx-auto md:mx-0">
+    Creative developer exploring the intersection of design and code with Next.js, 3d assets and other technologies.
+  </p>
+
+  {/* --- GAP FIX: Teeno buttons ab ek hi container mein hain --- */}
+  <div className="flex flex-col sm:flex-row gap-3 w-full max-w-lg mx-auto md:mx-0 mt-6">
+    
+    {/* Card 1 */}
+    <div className="flex-1 flex items-center justify-center px-6 py-3 rounded-full bg-blue-400/30">
+      <p className="text-xs md:text-sm font-semibold text-black whitespace-nowrap">
+        100% Code Quality
       </p>
-
-      <div className="card-container w-full mx-w-xs md:mx-wd-md mx-auto md-mx-0 lg:mx-w-md flex flex-col sm:flex-row gap-3">
-
-      <div className="card flex-1 py-2 px-6 lg:h-10 md:p-4 rounded-full bg-blue-200 shadow-sm text-black text-center flex items-center justify-center font-medium mb-5">
-      <p className='text-sm md:text-sm'>100% code quality</p>
-      </div>
-      <div className="card flex-1 w-full py-2 px-6 lg:h-10 rounded-full bg-blue-200 shadow-sm text-black text-center flex items-center justify-center font-medium">
-      <p className='text-sm md:text-sm'>10+ years of coding experience</p>
-      </div>
-      </div>
-
-      <Link href="/contact">
-        <Button className="bg-blue-200 text-black h-9 px-8 py-4 rounded-full font-medium hover:bg-blue-300 transition-all shadow-sm">
-          Get Started
-        </Button>
-      </Link>
     </div>
+
+    {/* Card 2 */}
+    <div className="flex-1 flex items-center justify-center px-6 py-3 rounded-full bg-blue-400/30">
+      <p className="text-xs md:text-sm font-semibold text-black whitespace-nowrap">
+        10+ Years Experience
+      </p>
+    </div>
+
+    {/* get started shifted above */}
+    <Link href="/contact" className="flex-1 w-full sm:w-auto">
+      <Button 
+        className="w-full h-full px-10 py-3 rounded-full bg-blue-400/30 border-none text-black font-semibold hover:bg-blue-200 hover:shadow-md transition-all active:scale-95 shadow-sm min-h-[48px]"
+      >
+        Get Started
+      </Button>
+    </Link>
+    
+  </div>
+</div>
 
     
         {/* Right Side: 3D Asset */}
