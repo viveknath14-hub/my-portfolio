@@ -30,7 +30,7 @@ const About = () => {
     Creative developer exploring the intersection of design and code with Next.js, 3d assets and other technologies.
   </p>
 
-  {/* --- GAP FIX: Teeno buttons ab ek hi container mein hain --- */}
+  {/*Teeno buttons ab ek hi container mein hain --- */}
   <div className="flex flex-col sm:flex-row gap-3 w-full max-w-lg mx-auto md:mx-0 mt-6">
     
     {/* Card 1 */}

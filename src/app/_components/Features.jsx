@@ -26,7 +26,7 @@ const AnimatedCard = ({ title, description, icon: Icon }) => {
 }
 
 function Features() {
-  // 2. Data Array: isse code clean rahega aur easily update kar sakenge
+  // 2. Data Array for features section and cards
   const featuresData = [
     {
       icon: Smartphone,

@@ -75,6 +75,18 @@
   }
 }
 
+/* New animation for revealing shades on cards on scroll */
+@keyframes blue-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
   /* EDITS: Inhe theme variables bana diya */
   --animate-float: float 4s ease-in-out infinite;
@@ -153,7 +165,18 @@
   view-timeline-axis: block;
   animation: linear reveal-image both;
   animation-timeline: --revealing-image;
-  animation-range: entry 10% cover 30%; /* Isse focus jaldi aayega */
+  animation-range: entry 30% cover 30%; /* Isse focus jaldi aayega */
+}
+
+/*Scroll reveal class yahan hai card shade reveal ke liye */
+
+.scroll-reveal-shade {
+  view-timeline-name: --shade;
+  view-timeline-axis: block;
+  animation: linear blue-reveal both;
+  animation-timeline: --shade;
+  /* Jab card screen ke 30% andar aaye tab shuru, 70% pe full blue */
+  animation-range: entry 30% cover 70%;
 }
 
 .dark {

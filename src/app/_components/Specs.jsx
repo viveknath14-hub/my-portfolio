@@ -19,13 +19,13 @@ const Specs = ({ data }) => {
     <section className="bg-white py-10 px-6 md:px-20 overflow-hidden">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        {/* Loop ab featuresToDisplay par chalega */}
+        {/* Loop ye vala featuresToDisplay par chalega */}
         {featuresToDisplay.map((item, index) => (
           <div key={index} className="relative group rounded-[24px] overflow-hidden border border-gray-100 transition-all duration-500 active:scale-[0.98] active:bg-blue-50/50">
             
-            {/* Blue Hover Shade Logic [cite: 2026-03-01] */}
+            {/* Blue Hover Shade Logic */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-400/30 to-transparent 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            opacity-0 group-hover:opacity-100 md:opacity-0 transition-opacity duration-500 pointer-events-none scroll-reveal-shade">
             </div>
 
             <div className="relative h-full bg-white p-8 flex flex-col justify-between z-10
@@ -34,7 +34,7 @@ const Specs = ({ data }) => {
               <div>
                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 
                                 group-hover:bg-blue-400 transition-all duration-300">
-                  {/* Dynamic Icon Styling [cite: 2026-02-27] */}
+                  {/* Dynamic Icon Styling  */}
                   {React.isValidElement(item.icon) ? React.cloneElement(item.icon, { 
                     className: "w-6 h-6 text-[#006aff] group-hover:text-white transition-colors" 
                   }) : null}
