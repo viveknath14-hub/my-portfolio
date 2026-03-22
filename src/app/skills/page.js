@@ -205,7 +205,7 @@ const page = () => {
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  className="scroll-reveal-img w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                  className="scroll-reveal-img w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
                 
                 {/* Overlay Content */}

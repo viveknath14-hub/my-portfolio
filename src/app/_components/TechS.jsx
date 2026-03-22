@@ -16,7 +16,7 @@ const TechS = () => {
               - md:justify-between (laptop par poori width cover karenge)
               - gap-x-12 (mobile par icons ke beech thoda gap rahega)
           */}
-          <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-12 gap-y-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+          <div className="flex scroll-reveal-img flex-wrap justify-center md:justify-between items-center gap-x-12 gap-y-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
             
             {/* MEAN Stack */}
             <div className="h-12 md:h-16 flex items-center">
