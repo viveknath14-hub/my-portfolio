@@ -264,7 +264,7 @@ const mobileAppData = [
   <div className="relative w-32 h-32 transition-transform duration-500 group-hover:scale-110">
     <img 
       src="/3d assets/Breeze.png"  //3D sphere ya icon wali image ka path
-      alt="Abstract Component"
+      alt="decorative image"
       className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(96,165,250,0.4)]"
     />
   </div>
@@ -278,8 +278,8 @@ const mobileAppData = [
       <div className=" p-[1px] overflow-hidden rounded-[35px] animate-border-spin bg-transparent h-full w-full">
       <div className="absolute inset-[1px] rounded-[33px] overflow-hidden bg-white">
         <img 
-          src="/3d assets/Breeze.png" // Apni image ka path yahan 
-          alt="Professional Developer"
+          src="/Team images/developer.jpg" // Apni image ka path yahan 
+          alt="Professional Developer decorative image"
           className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105 "
         />
         {/* Subtle light overlay to blend with white background */}

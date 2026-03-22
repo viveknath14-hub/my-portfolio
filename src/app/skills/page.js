@@ -200,17 +200,17 @@ const page = () => {
         <div className="lg:col-span-7">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {team.map((member, index) => (
-              <div key={index} className="group relative h-[400px] rounded-[2.5rem] overflow-hidden bg-gray-100">
+              <div key={index} className="group relative h-[400px] rounded-[2.5rem] overflow-hidden bg-gray-100 touch-manipulation transition-transform duration-100 active:scale-[0.98]">
                 {/* Background Image */}
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 />
                 
                 {/* Overlay Content */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                  <h3 className="text-2xl font-bold text-white mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-2xl font-bold text-white mb-1 translate-y-4 group-hover:translate-y-0 group-active:opacity-100 transition-transform duration-500 group-active:translate-y-0">
                     {member.name}
                   </h3>
                   <p className="text-blue-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
