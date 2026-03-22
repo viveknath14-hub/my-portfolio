@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import GlowCard from '@/components/ui/GlowCard'
-import { link } from 'framer-motion/client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -26,7 +26,7 @@ const About = () => {
       </h1>
       
       <p className="text-black text-lg max-w-md">
-        Creative developer exploring the intersection of design and code with Next.js and 3D assets.
+        Creative developer exploring the intersection of design and code with Next.js, 3d assets and other technologies.
       </p>
 
       <div className="card-container w-full mx-w-xs md:mx-wd-md mx-auto md-mx-0 lg:mx-w-md flex flex-col sm:flex-row gap-3">
