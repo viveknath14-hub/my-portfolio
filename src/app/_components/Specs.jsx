@@ -25,7 +25,7 @@ const Specs = ({ data }) => {
             
             {/* Blue Hover Shade Logic */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-400/30 to-transparent 
-                            opacity-0 group-hover:opacity-100 md:opacity-0 transition-opacity duration-500 pointer-events-none scroll-reveal-shade">
+                             group-hover:opacity-100 opacity-100 md:opacity-0 transition-opacity duration-500 pointer-events-none">
             </div>
 
             <div className="relative h-full bg-white p-8 flex flex-col justify-between z-10
