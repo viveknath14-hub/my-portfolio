@@ -49,7 +49,7 @@ const Count = () => {
             {/* Counter 1 */}
             <div className="flex flex-col items-center md:items-start space-y-2">
               <h3 className="text-5xl md:text-6xl font-bold text-blue-400">
-                <Counter from={0} to={500} />+
+                <Counter from={0} to={150} />+
               </h3>
               <p className="text-black text-sm font-medium">Successful projects</p>
             </div>

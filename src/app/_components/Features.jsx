@@ -54,7 +54,7 @@ function Features() {
           <div className="max-w-xl space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               Discover All The Powerful <br />
-              <span className='text-vivd-violet italic text-blue-400'>Codespot Features</span> 
+              <span className='text-vivd-violet italic text-blue-400'>Features</span> 
             </h2>
             <p className="text-black text-lg leading-relaxed">
               Unlock powerful features designed to streamline workflows, enhance collaboration, 
